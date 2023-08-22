@@ -1,10 +1,17 @@
 
 function App() {
    return (
-  <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-)
+    <router>
+      <routes>
+        <route></route>
+        <route></route>
+        <route></route>
+        <route></route>
+      </routes>
+    </router>
+
+   );
+  
 }
 
 export default App
