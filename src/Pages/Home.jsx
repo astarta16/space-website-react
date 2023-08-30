@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import Mobilebg from '../../public/images/home/background-home-mobile.jpg'
+import Tabletbg from '../../public/images/home/background-home-tablet.jpg'
+import Desktopbg from '../../public/images/home/background-home-desktop.jpg'
 
 function Home() {
   return (
@@ -9,17 +12,17 @@ function Home() {
       <div className="absolute min-h-screen h-full inset-0">
         <img
           className="object-cover h-full w-full md:hidden"
-          src="./images/home/background-home-mobile.jpg"
+          src={Mobilebg}
           alt="earth"
         />
         <img
           className="hidden md:block md:object-cover md:h-full md:w-full lg:hidden"
-          src="./images/home/background-home-tablet.jpg"
+          src={Tabletbg}
           alt="earth"
         />
         <img
           className="hidden lg:block lg:object-cover lg:h-full lg:w-full"
-          src="./images/home/background-home-desktop.jpg"
+          src={Desktopbg}
           alt="earth"
         />
       </div>

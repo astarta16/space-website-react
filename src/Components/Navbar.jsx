@@ -87,7 +87,6 @@ function Navbar() {
         <div className="burger md:hidden block pr-6 ">
           <img
             src={Hamburger}
-            alt=""
             className="cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           />

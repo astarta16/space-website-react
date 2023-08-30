@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../data.json";
+import Mobile from '../../public/images/destination/background-destination-mobile.jpg'
+import Tablet from '../../public/images/destination/background-destination-tablet.jpg'
+import Desktop from '../../public/images/destination/background-destination-desktop.jpg'
 
 function Destination() {
   const [activeLink, setActiveLink] = useState("Moon");
@@ -17,21 +20,18 @@ function Destination() {
       <div>
         <title>Destination</title>
       </div>
-      <div className="absolute min-h-screen h-full inset-0">
+      <div className="absolute  h-full inset-0">
         <img
-          className="object-cover h-full w-full md:hidden"
-          src="./images/destination/background-destination-mobile.jpg"
-          alt="earth"
+          className="object-cover min-h-screen w-full md:hidden"
+          src={Mobile}
         />
         <img
           className="hidden md:block md:object-cover md:h-full md:w-full lg:hidden"
-          src="./images/destination/background-destination-tablet.jpg"
-          alt="earth"
+          src={Tablet}
         />
         <img
           className="hidden lg:block lg:object-cover lg:h-full lg:w-full"
-          src="./images/destination/background-destination-desktop.jpg"
-          alt="earth"
+          src={Desktop}
         />
       </div>
       <div className="relative lg:mt-10 lg:max-w-6xl lg:mx-auto lg:pt-1.5">
