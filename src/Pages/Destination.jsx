@@ -75,7 +75,7 @@ function Destination() {
               <h1 className="planetName font-normal text-[80px] lg:text-[100px] leading-[100px] lg:leading-[200px] uppercase">
                 {item?.name}
               </h1>
-              <p className="font-cfont3 lg:text-lg  -text--clr-pale-blue md:mb-12">
+              <p className="lg:text-lg  -text--clr-pale-blue md:mb-12">
                 {item?.description}
               </p>
               <div className="border-t border-gray mt-8 pt-8 flex flex-col gap-8 pb-0.5 md:mt-12 md:pt-7 md:flex-row md:gap-24 md:justify-center lg:justify-start lg:gap-20">
@@ -105,4 +105,3 @@ function Destination() {
 }
 
 export default Destination;
-

@@ -1,5 +1,8 @@
 import  { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Logo from '../../public/images/logo.svg'
+import Close from "../../public/images/icon-close.svg"
+import Hamburger from "../../public/images/icon-hamburger.svg"
 
 function Navbar() {
   let [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +19,7 @@ function Navbar() {
         <Link to="/" className="flex items-center pl-6 lg:pl-14 shrink-0">
           <img
             className="max-w-[2.5rem] md:max-w-[3rem]"
-            src="./images/shared/logo.svg"
+            src= {Logo}
             alt="Logo"
           />
         </Link>
@@ -57,7 +60,7 @@ function Navbar() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <img
-                src="./images/shared/icon-close.svg"
+                src={Close}
                 alt=""
                 className="cursor-pointer"
               />
@@ -83,7 +86,7 @@ function Navbar() {
         </div>
         <div className="burger md:hidden block pr-6 ">
           <img
-            src="./images/shared/icon-hamburger.svg"
+            src={Hamburger}
             alt=""
             className="cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
