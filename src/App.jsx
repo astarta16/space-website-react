@@ -1,20 +1,23 @@
-// import Home from "./pages/Home";
-// import Crew from "./pages/Crew";
-// import Destination from "./pages/Destination";
-// import Tecnology from "./pages/Tecnology";
-import "./app.css";
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Header from "./components/Header/header";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import Home from "./pages/Home";
+import Destination from "./pages/Destination";
+import Crew from "./pages/Crew";
+import Technology from "./pages/Tecnology";
+import Navbar from "./Components/Navbar";
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <Header/>
-      <main>
-        <Routes />
-      </main>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/destination" element={<Destination />} />
+        <Route exact path="/crew" element={<Crew />} />
+        <Route exact path="/technology" element={<Technology />} />
+      </Routes>
     </Router>
   );
-};
+}
+
 export default App;
