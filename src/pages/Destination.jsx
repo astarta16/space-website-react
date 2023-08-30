@@ -1,20 +1,19 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../data.json";
 
 function Destination() {
   const [activeLink, setActiveLink] = useState("Moon");
-  let [item, setItem] = useState(data.destinations[0]);
-  const allPlanets = [...data.destinations.map((item) => item.name)];
-  let [planets, setPlanets] = useState(allPlanets);
-  
+  const [item, setItem] = useState(data.destinations[0]);
+
   function filterItems(planet) {
     setActiveLink(planet);
-    let newItems = data.destinations.filter((item) => item.name === planet);
+    const newItems = data.destinations.filter((item) => item.name === planet);
     setItem(newItems[0]);
   }
+
   return (
-    <main className=" bg-black text-white ">
+    <main className="bg-black text-white">
       <div>
         <title>Destination</title>
       </div>
@@ -36,12 +35,12 @@ function Destination() {
         />
       </div>
       <div className="relative lg:mt-10 lg:max-w-6xl lg:mx-auto lg:pt-1.5">
-        <h1 className="ml-6 md:ml-0 text-white  uppercase tracking-md leading-xs text-left md:pl-6 md:text-xl md:tracking-widest md:leading-6 lg:text-[28px] lg:tracking-xl lg:leading-md lg:pl-11 lg:mb-10">
+        <h1 className="ml-6 md:ml-0 text-white uppercase tracking-md leading-xs text-left md:pl-6 md:text-xl md:tracking-widest md:leading-6 lg:text-[28px] lg:tracking-xl lg:leading-md lg:pl-11 lg:mb-10">
           <strong className="opacity-25 pr-3">01 </strong>Pick your destination
         </h1>
-        <div className=" text-white bg-cover bg-center">
+        <div className="text-white bg-cover bg-center">
           <div className="flex flex-col lg:flex-row justify-center max-w-6xl relative lg:py-5 lg:p-10 md:gap-32">
-            <div className="left w-full lg:w-1/2 text-white  text-center lg:text-left md:mb-0 mb-3">
+            <div className="left w-full lg:w-1/2 text-white text-center lg:text-left md:mb-0 mb-3">
               <img
                 src={`./images/destination/image-${item.name.toLowerCase()}.png`}
                 className="w-[250px] h-[250px] mx-auto md:w-80 md:h-80 md:p-2.5 lg:w-[445px] lg:h-[445px] lg:p-0"
@@ -50,30 +49,29 @@ function Destination() {
             </div>
             <div className="right m-auto w-3/4 lg:w-1/2 text-white text-center lg:text-left g:mb-0 md:-mt-28 lg:-mt-10">
               <ul className="links mb-3 lg:mb-0 flex items-center justify-center lg:justify-start gap-x-14 text-white uppercase text-[16px] lg:text-xl">
-                {planets.map((item, index) => {
+                {data.destinations.map((planet, index) => {
                   return (
                     <li
                       className="group transition duration-300"
                       key={index}
                       onClick={() => {
-                        filterItems(item);
+                        filterItems(planet.name);
                       }}
                     >
                       <Link
-                        to={"#" + item}
+                        to={"#" + planet.name}
                         className={`${
-                          activeLink === item
+                          activeLink === planet.name
                             ? "inline-block py-2 border-white hover:border-b-[4px] hover:border-opacity-50 border-b-[4px] font-bold"
                             : "inline-block py-2 border-gray-400 hover:border-b-[1px]"
                         }`}
                       >
-                        {item}
+                        {planet.name}
                       </Link>
                     </li>
                   );
                 })}
               </ul>
-
               <h1 className="planetName font-normal text-[80px] lg:text-[100px] leading-[100px] lg:leading-[200px] uppercase">
                 {item?.name}
               </h1>
@@ -107,3 +105,4 @@ function Destination() {
 }
 
 export default Destination;
+
