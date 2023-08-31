@@ -1,5 +1,8 @@
 import  { useState } from "react";
 import data from "../data.json";
+import Techmobile from '../../public/images/technology/background-technology-mobile.jpg'
+import Techtablet from '../../public/images/technology/background-technology-tablet.jpg'
+import Techdesktop from '../../public/images/technology/background-technology-desktop.jpg'
 
 function Technology() {
   const [activeLink, setActiveLink] = useState(1);
@@ -14,23 +17,20 @@ function Technology() {
       <div className="absolute min-h-screen h-full inset-0">
         <img
           className="object-cover h-full w-full md:hidden"
-          src="./images/technology/background-technology-mobile.jpg"
-          alt="earth"
+          src={Techmobile}
         />
         <img
           className="hidden md:block md:object-cover md:h-full md:w-full xl:hidden"
-          src="./images/technology/background-technology-tablet.jpg"
-          alt="earth"
+          src={Techtablet}
         />
         <img
           className="hidden xl:block xl:object-cover xl:h-full xl:w-full"
-          src="./images/technology/background-technology-desktop.jpg"
-          alt="earth"
+          src={Techdesktop}
         />
       </div>
       <div className="relative xl:mt-10 xl:max-w-6xl xl:mx-auto xl:pt-1.5 overflow-hidden">
         <h1 className="xl:mb-20 mb-10 ml-6 md:ml-0 text-white uppercase tracking-md leading-xs text-left md:pl-6 md:text-xl md:tracking-widest md:leading-6 xl:text-[28px] xl:tracking-xl xl:leading-md ">
-          <strong className="opacity-25 pr-3 ">03 </strong>SPACE LAUNCH 101
+          <strong className="opacity-25 pr-3 ">03 </strong>SPACE LAUNCH
         </h1>
         <div className=" text-white bg-cover bg-center">
           <div className="flex flex-col-reverse xl:flex-row justify-center max-w-6xl relative xl:py-5 xl:gap-32">
@@ -60,8 +60,7 @@ function Technology() {
                 <h3 className="uppercase text-[12px] xl:text-[16px] text-[#FFFFFF]/50">
                   THE TERMINOLOGY…
                 </h3>
-
-                <h1 className="planetName font-normal text-[25px] xl:text-6xl  uppercase xl:my-6 whitespace-nowrap">
+                <h1 className="font-normal text-[25px] xl:text-6xl  uppercase xl:my-6 whitespace-nowrap">
                   {item?.name}
                 </h1>
                 <p className=" text-[15px] lg:text-xl -text--clr-pale-blue leading-loose">
