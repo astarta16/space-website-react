@@ -6,9 +6,7 @@ import Desktopbg from '../../public/images/home/background-home-desktop.jpg'
 function Home() {
   return (
     <main className="h-[75vh] bg-black text-white flex justify-center items-center bg-cover bg-center">
-      <div>
         <title>Home</title>
-      </div>
       <div className="absolute min-h-screen h-full inset-0">
         <img
           className="object-cover h-full w-full md:hidden"
@@ -34,7 +32,7 @@ function Home() {
           <h1 className="font-normal text-[120px] md:text-[150px] leading-[170px] md:leading-[200px]">
             SPACE
           </h1>
-          <p className="font-cfont3 lg:text-lg  -text--clr-pale-blue">
+          <p className="lg:text-lg  -text--clr-pale-blue">
             Let’s face it: if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this

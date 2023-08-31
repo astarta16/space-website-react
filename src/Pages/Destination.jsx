@@ -17,9 +17,7 @@ function Destination() {
 
   return (
     <main className="bg-black text-white">
-      <div>
         <title>Destination</title>
-      </div>
       <div className="absolute  h-full inset-0">
         <img
           className="object-cover min-h-screen w-full md:hidden"
