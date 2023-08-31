@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Mobilebg from '../../public/images/home/background-home-mobile.jpg'
-import Tabletbg from '../../public/images/home/background-home-tablet.jpg'
-import Desktopbg from '../../public/images/home/background-home-desktop.jpg'
+import Mobilebg from '/images/home/background-home-mobile.jpg'
+import Tabletbg from '/images/home/background-home-tablet.jpg'
+import Desktopbg from '/images/home/background-home-desktop.jpg'
 
 function Home() {
   return (

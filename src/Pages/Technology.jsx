@@ -1,8 +1,8 @@
 import  { useState } from "react";
 import data from "../data.json";
-import Techmobile from '../../public/images/technology/background-technology-mobile.jpg'
-import Techtablet from '../../public/images/technology/background-technology-tablet.jpg'
-import Techdesktop from '../../public/images/technology/background-technology-desktop.jpg'
+import Techmobile from '/images/technology/background-technology-mobile.jpg'
+import Techtablet from '/images/technology/background-technology-tablet.jpg'
+import Techdesktop from '/images/technology/background-technology-desktop.jpg'
 
 function Technology() {
   const [activeLink, setActiveLink] = useState(1);

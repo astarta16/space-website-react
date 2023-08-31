@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../data.json";
-import Mobile from '../../public/images/destination/background-destination-mobile.jpg'
-import Tablet from '../../public/images/destination/background-destination-tablet.jpg'
-import Desktop from '../../public/images/destination/background-destination-desktop.jpg'
+import Mobile from '/images/destination/background-destination-mobile.jpg'
+import Tablet from '/images/destination/background-destination-tablet.jpg'
+import Desktop from '/images/destination/background-destination-desktop.jpg'
 
 function Destination() {
   const [activeLink, setActiveLink] = useState("Moon");

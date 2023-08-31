@@ -1,5 +1,8 @@
 import { useState } from "react";
 import data from "../data.json";
+import Crewmobile from "/images/crew/background-crew-mobile.jpg"
+import Crewtablet from "/images/crew/background-crew-tablet.jpg"
+import Crewdesktop from "/images/crew/background-crew-desktop.jpg"
 
 function Crew() {
   const [activeLink, setActiveLink] = useState("Douglas Hurley");
@@ -16,18 +19,15 @@ function Crew() {
       <div className="absolute min-h-screen h-full inset-0">
         <img
           className="object-cover h-full w-full md:hidden"
-          src="./images/crew/background-crew-mobile.jpg"
-          alt="earth"
+          src={Crewmobile}
         />
         <img
           className="hidden md:block md:object-cover md:h-full md:w-full lg:hidden"
-          src="./images/crew/background-crew-tablet.jpg"
-          alt="earth"
+          src={Crewtablet}
         />
         <img
           className="hidden lg:block lg:object-cover lg:h-full lg:w-full"
-          src="./images/crew/background-crew-desktop.jpg"
-          alt="earth"
+          src={Crewdesktop}
         />
       </div>
       <div className="relative lg:mt-10 lg:max-w-6xl lg:mx-auto lg:pt-1.5 overflow-hidden">
